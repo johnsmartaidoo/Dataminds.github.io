@@ -1,0 +1,10 @@
+{
+  "sales": {
+    "labels": ["Jan", "Feb", "Mar", "Apr", "May"],
+    "values": [65, 59, 80, 81, 56]
+  },
+  "inventory": {
+    "labels": ["In Stock", "Low Stock", "Out of Stock"],
+    "values": [45, 15, 5]
+  }
+}
