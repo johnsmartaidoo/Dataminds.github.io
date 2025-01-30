@@ -1,0 +1,13 @@
+<section class="pos-services">
+    <h2>POS Analytics Solutions</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Real-Time Sales Tracking</h3>
+            <p>AI-powered insights from POS data streams.</p>
+        </div>
+        <div class="card">
+            <h3>Inventory Optimization</h3>
+            <p>ML-driven stock management.</p>
+        </div>
+    </div>
+</section>
