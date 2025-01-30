@@ -1,0 +1,29 @@
+// Fetch data from JSON
+fetch('/data/analytics.json')
+  .then(response => response.json())
+  .then(data => {
+    // Sales Chart
+    new Chart(document.getElementById('salesChart'), {
+      type: 'line',
+      data: {
+        labels: data.sales.labels,
+        datasets: [{
+          label: 'Daily Sales',
+          data: data.sales.values,
+          borderColor: '#F0B429'
+        }]
+      }
+    });
+
+    // Inventory Chart
+    new Chart(document.getElementById('inventoryChart'), {
+      type: 'doughnut',
+      data: {
+        labels: data.inventory.labels,
+        datasets: [{
+          data: data.inventory.values,
+          backgroundColor: ['#2A5C82', '#F0B429', '#404040']
+        }]
+      }
+    });
+  });
