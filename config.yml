@@ -1,0 +1,5 @@
+title: DataMinds
+description: AI & Data Solutions
+theme: jekyll-theme-minimal
+plugins:
+  - jekyll-feed

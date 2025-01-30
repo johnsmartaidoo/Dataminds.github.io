@@ -1,0 +1,25 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+      branches:
+            - main
+
+            jobs:
+              deploy:
+                  runs-on: ubuntu-latest
+                      steps:
+                            - uses: actions/checkout@v2
+                                  - uses: actions/jekyll-build-pages@v1
+                                          with:
+                                                    source: ./
+                                                              destination: ./_site
+                                                                    - uses: actions/upload-pages-artifact@v1
+                                                                      pages-deploy:
+                                                                          needs: deploy
+                                                                              permissions:
+                                                                                    pages: write
+                                                                                          id-token: write
+                                                                                              runs-on: ubuntu-latest
+                                                                                                  steps:
+                                                                                                        - uses: actions/deploy-pages@v2
