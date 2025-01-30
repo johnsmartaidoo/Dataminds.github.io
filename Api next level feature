@@ -1,0 +1,9 @@
+// scripts/auth.js
+   const login = async () => {
+     const response = await fetch('/api/auth', {
+       method: 'POST',
+       headers: {'Content-Type': 'application/json'},
+       body: JSON.stringify({username, password})
+     });
+     localStorage.setItem('token', response.data.token);
+   }
