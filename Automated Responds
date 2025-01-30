@@ -1,0 +1,12 @@
+# scripts/report_generator.py
+   import pandas as pd
+   from datetime import datetime
+
+   def generate_daily_report():
+       data = pd.read_json('data/analytics.json')
+       report = f"""
+       Daily Report ({datetime.today().strftime('%Y-%m-%d')})
+       Total Sales: ${data['sales']['values'].sum()}
+       """
+       with open('reports/daily.md', 'w') as f:
+           f.write(report)
