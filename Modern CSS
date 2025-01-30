@@ -1,0 +1,26 @@
+:root {
+    --primary: #2A5C82;
+    --secondary: #0A0A0A;
+    --accent: #F0B429;
+    --text: #F5F5F5;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--secondary);
+    color: var(--text);
+}
+
+.navbar {
+    background: rgba(10, 10, 10, 0.95);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.hero {
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    padding: 8rem 0;
+    text-align: center;
+}
