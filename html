@@ -3,33 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="DataMinds - AI, Data & POS Solutions">
+    <meta name="description" content="DataMinds - Enterprise AI, Data Analytics, and POS Solutions">
+    <meta name="keywords" content="AI, data analytics, POS solutions, predictive modeling, business intelligence">
+    <meta name="author" content="John Smart Aidoo">
     <title>DataMinds | Enterprise AI Solutions</title>
-    <link rel="stylesheet" href="styles/main.css">
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- React and Babel CDNs for interactivity -->
+    <script src="https://cdn.jsdelivr.net/npm/react@17/umd/react.development.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@babel/standalone@7.20.6/babel.min.js"></script>
 </head>
-<body>
-    <!-- Professional Navbar -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="/" class="logo">
-                <img src="assets/logo.svg" alt="DataMinds Logo">
+<body class="bg-gray-100 font-sans">
+    <!-- Navbar -->
+    <nav class="bg-purple shadow-lg">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="/" class="flex items-center">
+                <img src="assets/logo.svg" alt="DataMinds Logo" class="h-10 w-auto">
+                <span class="ml-3 text-xl font-bold text-gray-800">DataMinds</span>
             </a>
-            <div class="nav-menu">
-                <a href="/services.html">Services</a>
-                <a href="/dashboard.html">Dashboard</a>
-                <a href="/blog.html">Blog</a>
+            <div class="space-x-6">
+                <a href="/services.html" class="text-gray-600 hover:text-blue-600 transition">Services</a>
+                <a href="/dashboard.html" class="text-gray-600 hover:text-blue-600 transition">Dashboard</a>
+                <a href="/blog.html" class="text-gray-600 hover:text-blue-600 transition">Blog</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-600 transition">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h1>AI-Driven Insights for Modern Businesses</h1>
-            <p>POS Analytics | Predictive Modeling | BI Automation</p>
+    <section class="hero bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">AI-Driven Insights for Modern Businesses</h1>
+            <p class="text-lg md:text-xl mb-6">Unlock the power of POS Analytics, Predictive Modeling, and BI Automation.</p>
+            <a href="#contact" class="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-200 transition">Get Started</a>
         </div>
     </section>
 
-    <!-- More sections... -->
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">About DataMinds</h2>
+            <p class="text-gray-600 text-lg max-w-3xl mx-auto">DataMinds, led by John Smart Aidoo, specializes in delivering cutting-edge AI and data analytics solutions. We empower businesses with actionable insights through advanced predictive modeling and business intelligence automation.</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Our Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">POS Analytics Platform</h3>
+                    <p class="text-gray-600">A real-time analytics solution for point-of-sale systems, optimizing sales and inventory management.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Predictive Sales Model</h3>
+                    <p class="text-gray-600">Machine learning models to forecast sales trends and improve business decision-making.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">BI Automation Suite</h3>
+                    <p class="text-gray-600">Automated dashboards and reporting tools for streamlined business intelligence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Get in Touch</h2>
+            <p class="text-gray-600 text-lg mb-6">Interested in transforming your business with AI? Contact us today!</p>
+            <div class="max-w-md mx-auto">
+                <div class="mb-4">
+                    <input type="text" placeholder="Name" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" />
+                </div>
+                <div class="mb-4">
+                    <input type="email" placeholder="Email" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" />
+                </div>
+                <div class="mb-4">
+                    <textarea placeholder="Message" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" rows="4"></textarea>
+                </div>
+                <button class="bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition">Send Message</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 DataMinds. All rights reserved.</p>
+            <div class="mt-4 space-x-4">
+                <a href="https://github.com/johnsmartaidoo" class="hover:text-blue-400">GitHub</a>
+                <a href="https://linkedin.com" class="hover:text-blue-400">LinkedIn</a>
+                <a href="https://x.com" class="hover:text-blue-400">X</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- React Component Placeholder -->
+    <div id="root"></div>
+    <script type="text/babel">
+        function App() {
+            return null; // Placeholder for future React components
+        }
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
 </body>
 </html>
